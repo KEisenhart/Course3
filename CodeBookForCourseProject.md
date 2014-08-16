@@ -2,7 +2,7 @@
 #CodeBook for Course Project for Coursera Class Getting & Cleaning Data 
 >==================================================================
 
-NOTE: FieldWidth or Range of Variables #3-#88 are variable up to 32 characters
+NOTE: FieldWidth of Variables are variable up to 32 characters
 
 1.Variable:  subjectids
 
