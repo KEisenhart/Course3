@@ -6,9 +6,10 @@ FieldWidth of all Variables is variable up to 32 characters
 
 
 **Variable Name**+++++++++**Definition**++++++++++++++++++++++++++++++++**Range of Values**
+
 1.subjectids
-	a.Subject identifiers						
-		*integer 1 to 30
+-Subject identifiers						
+*integer 1 to 30
 
 2.activities		1-6 activities per subject:Walking, Walking				integer 1 to 6
 		upstairs, Walking Downstairs, Sitting, Standing	
