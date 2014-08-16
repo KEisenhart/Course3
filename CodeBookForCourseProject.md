@@ -1,5 +1,5 @@
 >==================================================================
-#Course Project for Coursera Getting & Cleaning Data class
+#CodeBook for Course Project for Coursera Class Getting & Cleaning Data 
 >==================================================================
 
 NOTE: FieldWidth of all Variables is variable up to 32 characters
@@ -15,247 +15,346 @@ NOTE: FieldWidth of all Variables is variable up to 32 characters
 3.Variable: tbodyaccstdx
 
     Definition: Standard Deviation of body acceleration - x axis
-    Range: 
+    Range: [-1,1] 
 4.Variable: tbodyaccstdy
 
     Definition: Standard Deviation of body acceleration - y axis
-    Range:
+    Range: [-1,1]
 5.Variable: tbodyaccstdz
 
     Definition: Standard Deviation of body acceleration - z axis
-    Range:   
+    Range: [-1,1]   
 6.Variable: tgravityaccstdx
 
     Definition: Standard Deviation of gravity acceleration - x axis
-    Range:
+    Range: [-1,1]
 7.Variable: tgravityaccstdy
 
     Definition: Standard Deviation of gravity acceleration - y axis
-    Range:
+    Range: [-1,1]
 8.Variable: tgravityaccstdz
 
     Definition: Standard Deviation of gravity acceleration - z axis
-    Range:
+    Range: [-1,1]
 9.Variable: tbodyaccjerkstdx
 
     Definition: Standard Deviation of body accleration with jerk movements - x axis
-    Range:
+    Range: [-1,1]
 10.Variable: tbodyaccjerkstdy
 
     Definition: Standard Deviation of body accleration with jerk movements - y axis
-    Range:   
+    Range: [-1,1]   
 11.Variable: tbodyaccjerkstdz
 
     Definition: Standard Deviation of body accleration with jerk movements - z axis
-    Range:
+    Range: [-1,1]
 12.Variable: tbodygyrostdx
 
     Definition: Standard Deviation of gyroscope - x axis	
-    Range:
+    Range: [-1,1]
 13.Variable: tbodygyrostdy
 
     Definition: Standard Deviation of gyroscope - y axis	
-    Range:
+    Range: [-1,1]
 14.Variable: tbodygyrostdz
 
     Definition: Standard Deviation of gyroscope - z axis	
-    Range:
+    Range: [-1,1]
 15.Variable: tbodygyrojerkstdx
 
     Definition: Standard Deviation of gyroscope with jerk movements - x axis	
-    Range:   
+    Range: [-1,1]   
 16.Variable: tbodygyrojerkstdy
 
     Definition: Standard Deviation of gyroscope with jerk movements - y axis	
-    Range:
+    Range: [-1,1]
 17.Variable: tbodygyrojerkstdz
 
     Definition: Standard Deviation of gyroscope with jerk movements - z axis	
-    Range:
-18.Variable: abc
+    Range: [-1,1]
+18.Variable: tbodyaccmagstd
 
-    Definition:
-    Range:
-19.Variable: abc
+    Definition: Magnitude of the Standard Deviation of body accleration
+    Range: [-1,1]
+19.Variable: tgravityaccmagstd
 
-    Definition:
-    Range:
-20.Variable: abc
+    Definition: Magnitude of the Standard Deviation  of gravity accleration
+    Range: [-1,1]
+20.Variable: tbodyaccjerkmagstd
 
-    Definition:
-    Range:   
-21.Variable: abc
+    Definition: Magnitude of the Standard Deviation of body accleration with jerk movements
+    Range: [-1,1]   
+21.Variable: tbodygyromagstd
 
-    Definition:
-    Range:
-22.Variable: abc
+    Definition: Magnitude of the Standard Deviation of gyroscope	
+    Range: [-1,1]
+22.Variable:tbodygyrojerkmagstd	
 
-    Definition:
-    Range:
-23.Variable: abc
+    Definition: Magnitude of the Standard Deviation of gyroscope with jerk movements
+    Range: [-1,1]
+23.Variable: fbodyaccstdx
 
-    Definition:
-    Range:   
-24.Variable: abc
+    Definition: Fast Fourier Transform applied to STD of body acceleration - x axis
+    Range: [-1,1]   
+24.Variable: fbodyaccstdy
 
-    Definition:
-    Range:   
-25.Variable: abc
+    Definition: Fast Fourier Transform applied to STD of body acceleration - y axis
+    Range: [-1,1]   
+25.Variable: fbodyaccstdz
 
-    Definition:
-    Range:
-26.Variable: abc
+    Definition: Fast Fourier Transform applied to STD of body acceleration - z axis
+    Range: [-1,1]
+26.Variable: fbodyaccjerkstdx	
 
-    Definition:
-    Range:
-27.Variable: abc
+    Definition: Fast Fourier Transform applied to STD of body acceleration with jerk movements - x axis
+    Range: [-1,1]
+27.Variable: fbodyaccjerkstdy
 
-    Definition:
-    Range:   
-28.Variable: abc
+    Definition: Fast Fourier Transform applied to STD of body acceleration with jerk movements - y axis
+    Range: [-1,1]   
+28.Variable: fbodyaccjerkstdz
 
-    Definition:
-    Range:
-29.Variable: abc
+    Definition: Fast Fourier Transform applied to STD of body acceleration with jerk movements - z axis
+    Range: [-1,1]
+29.Variable: fbodygyrostdx
 
-    Definition:
-    Range:
-30.Variable: abc
+    Definition: Fast Fourier Transform applied to STD of gyroscope - x axis	
+    Range: [-1,1]
+30.Variable: fbodygyrostdy
 
-    Definition:
-    Range:   
+    Definition: Fast Fourier Transform applied to STD of gyroscope - y axis
+    Range: [-1,1]   
+31.Variable: fbodygyrostdz
 
+    Definition: Fast Fourier Transform applied to STD of gyroscope - z axis
+    Range: [-1,1]   
+32.Variable: fbodyaccmagstd
 
+    Definition: Fast Fourier Transform applied to Magntitude of STD of body accleration
+    Range: [-1,1]
+33.Variable: fbodybodyaccjerkmagstd
 
+    Definition: Fast Fourier Transform applied to Magntitude of STD of body accleration with jerk movements	
+    Range: [-1,1]
+34.Variable: fbodybodygyromagstd
 
+    Definition: Fast Fourier Transform applied to Magntitude of STD of gyroscope
+    Range: [-1,1]   
+35.Variable: fbodybodygyrojerkmagstd
 
+    Definition: Fast Fourier Transform applied to Magntitude of STD of gyroscope with jerk movements
+    Range: [-1,1]   
+36.Variable: tbodyaccmeanx
 
+    Definition: Mean of body acceleration signal -  along x axis
+    Range: [-1,1]
+37.Variable: tbodyaccmeany
 
-2.activities		1-6 activities per subject:Walking, Walking				integer 1 to 6
-		upstairs, Walking Downstairs, Sitting, Standing	
-		or Laying			
-3.tbodyaccstdx	Standard Deviation of body acceleration - x axis			[-1,1]
-4.tbodyaccstdy	Standard Deviation of body acceleration - y axis			[-1,1]
-5.tbodyaccstdz	Standard Deviation of body acceleration - z axis			[-1,1]
-tgravityaccstdx	Standard Deviation of gravity acceleration - x axis			[-1,1]
-tgravityaccstdy	Standard Deviation of gravity acceleration - y axis			[-1,1]
-tgravityaccstdz	Standard Deviation of gravity acceleration - z axis			[-1,1]
-tbodyaccjerkstdx	Standard Deviation of body accleration with jerk movements - x axis	[-1,1]
-tbodyaccjerkstdy	Standard Deviation of body accleration with jerk movements - y axis	[-1,1]
-tbodyaccjerkstdz	Standard Deviation of body accleration with jerk movements - z axis	[-1,1]
-tbodygyrostdx	Standard Deviation of gyroscope - x axis				[-1,1]
-tbodygyrostdy	Standard Deviation of gyroscope - y axis				[-1,1]
-tbodygyrostdz	Standard Deviation of gyroscope - z axis				[-1,1]
-tbodygyrojerkstdx	Standard Deviation of gyroscope with jerk movements - x axis		[-1,1]
-tbodygyrojerkstdy	Standard Deviation of gyroscope with jerk movements - y axis		[-1,1]
-tbodygyrojerkstdz	Standard Deviation of gyroscope with jerk movements - z axis		[-1,1]
-tbodyaccmagstd	Standard Deviation of magnitude of body accleration	 		[-1,1]
-tgravityaccmagstd	Standard Deviation of magnitude of gravity accleration		[-1,1]
-tbodyaccjerkmagstd	Standard Deviation of magnitude of body accleration with jerk movements	[-1,1]
-tbodygyromagstd	Standard Deviation of magnitude of gyroscope			[-1,1]
-tbodygyrojerkmagstd	Standard Deviation of magntude of gyroscope with jerk movements 	[-1,1]
-fbodyaccstdx	Fast Fourier Transform applied to STD of body acceleration - x axis	[-1,1]
-fbodyaccstdy	Fast Fourier Transform applied to STD of body acceleration - y axis	[-1,1]
-fbodyaccstdz	Fast Fourier Transform applied to STD of body acceleration - z axis	[-1,1]
-fbodyaccjerkstdx	Fast Fourier Transform applied to STD of body acceleration with jerk 
-		movements - x axis						[-1,1]
-fbodyaccjerkstdy	Fast Fourier Transform applied to STD of body acceleration with jerk 
-		movements - y axis						[-1,1]
-fbodyaccjerkstdz	Fast Fourier Transform applied to STD of body acceleration with jerk 
-		movements - z axis						[-1,1]
-fbodygyrostdx	Fast Fourier Transform applied to STD of gyroscope - x axis		[-1,1]
-fbodygyrostdy	Fast Fourier Transform applied to STD of gyroscope - y axis		[-1,1]
-fbodygyrostdz	Fast Fourier Transform applied to STD of gyroscope - z axis		[-1,1]
-fbodyaccmagstd	Fast Fourier Transform applied to STD of magnitude of body accleration	[-1,1]
-fbodybodyaccjerkmagstd	
-		Fast Fourier Transform applied to STD of magnitude of body accleration 
-		with jerk movements						[-1,1]
-fbodybodygyromagstd	
-		Fast Fourier Transform applied to STD of magnitude of gyroscope	[-1,1]
-fbodybodygyrojerkmagstd	
-		Fast Fourier Transform applied to STD of gyroscope with jerk movements [-1,1]
-tbodyaccmeanx	Mean of body acceleration signal -  along x axis			[-1,1]
-tbodyaccmeany	Mean of body acceleration signal -  along y axis			[-1,1]
-tbodyaccmeanz	Mean of body acceleration signal -  along z axis			[-1,1]
-tgravityaccmeanx	Mean of gravity acceleration signal - along x axis			[-1,1]
-tgravityaccmeany	Mean of gravity acceleration signal - along y axis			[-1,1]
-tgravityaccmeanz	Mean of gravity acceleration signal - along z axis			[-1,1]
-tbodyaccjerkmeanx	Mean of body accleration with jerk movements - x axis		[-1,1]
-tbodyaccjerkmeany	Mean of body accleration with jerk movements - y axis		[-1,1]
-tbodyaccjerkmeanz	Mean of body accleration with jerk movements - z axis		[-1,1]
-tbodygyromeanx	Mean of gyroscope - x axis					[-1,1]
-tbodygyromeany	Mean of gyroscope - y axis					[-1,1]
-tbodygyromeanz	Mean of gyroscope - z axis					[-1,1]
-tbodygyrojerkmeanx	Mean of gyroscope with jerk movements - x axis			[-1,1]
-tbodygyrojerkmeany	Mean of gyroscope with jerk movements - y axis			[-1,1]
-tbodygyrojerkmeanz	Mean of gyroscope with jerk movements - z axis			[-1,1]
-tbodyaccmagmean	Mean of magnitude of body accleration				[-1,1]
-tgravityaccmagmean	Mean of magnitude of gravity accleration				[-1,1]
-tbodyaccjerkmagmean	
-		Mean of magnitude of body accleration with jerk movements		[-1,1]
-tbodygyromagmean	Mean of magnitude of gyroscope				[-1,1]
-tbodygyrojerkmagmean	Mean of magntude of gyroscope with jerk movements 	[-1,1]
-fbodyaccmeanx	Fast Fourier Transform applied to Mean of body acceleration - x axis	[-1,1]
-fbodyaccmeany	Fast Fourier Transform applied to Mean of body acceleration - y axis	[-1,1]
-fbodyaccmeanz	Fast Fourier Transform applied to Mean of body acceleration - z axis	[-1,1]
-fbodyaccmeanfreqx	Fast Fourier Transform applied to Mean frequency of body 
-		acceleration - x axis						[-1,1]
-fbodyaccmeanfreqy	Fast Fourier Transform applied to Mean frequency of body 
-		acceleration - y axis						[-1,1]
-fbodyaccmeanfreqz	Fast Fourier Transform applied to Mean frequency of body 
-		acceleration - z axis						[-1,1]
-fbodyaccjerkmeanx	Fast Fourier Transform applied to Mean of body acceleraion with jerk 
-		movements - x axis						[-1,1]
-fbodyaccjerkmeany	Fast Fourier Transform applied to Mean of body acceleraion with jerk 
-		movements - y axis						[-1,1]
-fbodyaccjerkmeanz	Fast Fourier Transform applied to Mean of body acceleraion with jerk 
-		movements - z axis						[-1,1]
-fbodyaccjerkmeanfreqx	
-		Fast Fourier Transform applied to Mean Frequency of body 
-		acceleraion with jerk movements - x axis				[-1,1]
-fbodyaccjerkmeanfreqy	
-		Fast Fourier Transform applied to Mean Frequency of body 
-		acceleraion with jerk movements - y axis				[-1,1]
-fbodyaccjerkmeanfreqz	
-		Fast Fourier Transform applied to Mean Frequency of body 
-		acceleraion with jerk movements - z axis				[-1,1]
-fbodygyromeanx	Fast Fourier Transform applied to Mean of gyroscope - x axis		[-1,1]
-fbodygyromeany	Fast Fourier Transform applied to Mean of gyroscope - y axis		[-1,1]
-fbodygyromeanz	Fast Fourier Transform applied to Mean of gyroscope - z axis		[-1,1]
-fbodygyromeanfreqx	Fast Fourier Transform applied to Mean Frequency of gyroscope - x axis	[-1,1]
-fbodygyromeanfreqy	Fast Fourier Transform applied to Mean Frequency of gyroscope - y axis	[-1,1]
-fbodygyromeanfreqz	Fast Fourier Transform applied to Mean Frequency of gyroscope - z axis	[-1,1]
-fbodyaccmagmean	Fast Fourier Transform applied to Magnitude of Mean of body 
-		acceleration						[-1,1]
-fbodyaccmagmeanfreq	
-		Fast Fourier Transform applied to Magnitude of Mean Frequency of 
-		body acceleration						[-1,1]
-fbodybodyaccjerkmagmean	
-		Fast Fourier Transform applied to Magnitude of Mean of 
-		body acceleration with jerk movements 				[-1,1]
-fbodybodyaccjerkmagmeanfreq	
-		Fast Fourier Transform applied to Magnitude of Mean Frequency of 
-		body acceleration with jerk movements				[-1,1]
-fbodybodygyromagmean	
-		Fast Fourier Transform applied to Magnitude of Mean of gyroscope	[-1,1]
-fbodybodygyromagmeanfreq	
-		Fast Fourier Transform applied to Magnitude of Mean Frequency 
-		of gyroscope						[-1,1]
-fbodybodygyrojerkmagmean	
-		Fast Fourier Transform applied to Magnitude of Mean of gyroscope 
-		with jerk movements						[-1,1]
-fbodybodygyrojerkmagmeanfreq	
-		Fast Fourier Transform applied to Magnitude of Mean Frequency 
-		of gyroscope with jerk movements				[-1,1]
-angletbodyaccmeangravity	
-		Angle of Mean of body acceleration signal  vs gravity			[-1,1]
-angletbodyaccjerkmeangravitymean	
-		Angle of Mean of body accleration with jerk movements  vs gravity Mean	[-1,1]
-angletbodygyromeangravitymean	
-		Angle of Mean of gyroscope vs gravity Mean 			[-1,1]
-angletbodygyrojerkmeangravitymean	
-		Angle of Mean of gyroscope with jerk movements vs gravity Mean	[-1,1]
-anglexgravitymean	Angle of gravity vs Mean - x axis 				[-1,1]
-angleygravitymean	Angle of gravity vs Mean - y axis 				[-1,1]
-anglezgravitymean	Angle of gravity vs Mean - z axis 				[-1,1]
+    Definition: Mean of body acceleration signal -  along y axis	
+    Range: [-1,1]
+38.Variable: tbodyaccmeanz
+
+    Definition: Mean of body acceleration signal -  along z axis
+    Range: [-1,1]   
+39.Variable: tgravityaccmeanx
+
+    Definition: Mean of gravity acceleration signal - along x axis
+    Range: [-1,1] 
+40.Variable: tgravityaccmeany
+
+    Definition: Mean of gravity acceleration signal - along y axis
+    Range: [-1,1] 
+41.Variable: tgravityaccmeanz
+
+    Definition: Mean of gravity acceleration signal - along z axis
+    Range: [-1,1]   
+42.Variable: tbodyaccjerkmeanx
+
+    Definition: Mean of body accleration with jerk movements - x axis
+    Range: [-1,1]
+43.Variable: tbodyaccjerkmeany
+
+    Definition: Mean of body accleration with jerk movements - y axis
+    Range: [-1,1] 
+44.Variable: tbodyaccjerkmeanz
+
+    Definition: Mean of body accleration with jerk movements - z axis
+    Range: [-1,1]   
+45.Variable: tbodygyromeanx
+
+    Definition: Mean of gyroscope - x axis
+    Range: [-1,1]   
+46.Variable: tbodygyromeany
+
+    Definition: Mean of gyroscope - y axis
+    Range: [-1,1]
+47.Variable: tbodygyromeanz
+
+    Definition: Mean of gyroscope - z axis
+    Range: [-1,1]
+48.Variable: tbodygyrojerkmeanx
+
+    Definition: Mean of gyroscope with jerk movements - x axis
+    Range: [-1,1]   
+49.Variable: tbodygyrojerkmeany
+
+    Definition: Mean of gyroscope with jerk movements - y axis
+    Range: [-1,1]   
+50.Variable: tbodygyrojerkmeanz
+
+    Definition: Mean of gyroscope with jerk movements - z axis
+    Range: [-1,1] 
+51.Variable: tbodyaccmagmean
+
+    Definition: Magnitude of the Mean of body accleration
+    Range: [-1,1]
+52.Variable: tgravityaccmagmean	
+
+    Definition: Magnitude of the Mean of gravity accleration
+    Range: [-1,1]
+53.Variable: tbodyaccjerkmagmean
+
+    Definition: Magnitude of the Mean of body accleration with jerk movements
+    Range: [-1,1]   
+54.Variable: tbodygyromagmean
+
+    Definition: Magnitude of the Mean of gyroscope
+    Range: [-1,1]   
+55.Variable: tbodygyrojerkmagmean
+
+    Definition: Magnitude of the Mean of gyroscope with jerk movements 
+    Range: [-1,1]
+56.Variable: fbodyaccmeanx
+
+    Definition: Fast Fourier Transform applied to Mean of body acceleration - x axis
+    Range: [-1,1]
+57.Variable: fbodyaccmeany
+
+    Definition: Fast Fourier Transform applied to Mean of body acceleration - y axis
+    Range: [-1,1]   
+58.Variable: fbodyaccmeanz
+
+    Definition: Fast Fourier Transform applied to Mean of body acceleration - z axis
+    Range: [-1,1]
+59.Variable: fbodyaccmeanfreqx
+
+    Definition: Fast Fourier Transform applied to Mean frequency of body acceleration - x axis
+    Range: [-1,1]
+60.Variable: fbodyaccmeanfreqy
+
+    Definition: Fast Fourier Transform applied to Mean frequency of body acceleration - y axis
+    Range: [-1,1]   
+61.Variable: fbodyaccmeanfreqz
+
+    Definition: Fast Fourier Transform applied to Mean frequency of body acceleration - z axis
+    Range: [-1,1]
+62.Variable: fbodyaccjerkmeanx	
+
+    Definition: Fast Fourier Transform applied to Mean of body acceleraion with jerk movements - x axis
+    Range: [-1,1]
+63.Variable: fbodyaccjerkmeany
+
+    Definition: Fast Fourier Transform applied to Mean of body acceleraion with jerk movements - y axis
+    Range: [-1,1]   
+64.Variable: fbodyaccjerkmeanz
+
+    Definition: Fast Fourier Transform applied to Mean of body acceleraion with jerk movements - z axis
+    Range: [-1,1]   
+65.Variable: fbodyaccjerkmeanfreqx
+
+    Definition: Fast Fourier Transform applied to Mean Frequency of body acceleraion with jerk movements - x axis
+    Range: [-1,1]
+66.Variable: fbodyaccjerkmeanfreqy
+
+    Definition: Fast Fourier Transform applied to Mean Frequency of body acceleraion with jerk movements - y axis
+    Range: [-1,1]
+67.Variable: fbodyaccjerkmeanfreqz
+
+    Definition: Fast Fourier Transform applied to Mean Frequency of body acceleraion with jerk movements - z axis
+    Range: [-1,1]   
+68.Variable: fbodygyromeanx
+
+    Definition: Fast Fourier Transform applied to Mean of gyroscope - x axis
+    Range: [-1,1]
+69.Variable: fbodygyromeany
+
+    Definition: Fast Fourier Transform applied to Mean of gyroscope - y axis
+    Range: [-1,1]
+70.Variable: fbodygyromeanz
+
+    Definition: Fast Fourier Transform applied to Mean of gyroscope - z axis	
+    Range: [-1,1]   
+71.Variable: fbodygyromeanfreqx	
+
+    Definition: Fast Fourier Transform applied to Mean Frequency of gyroscope - x axis
+    Range: [-1,1]
+72.Variable: fbodygyromeanfreqy	 	
+
+    Definition: Fast Fourier Transform applied to Mean Frequency of gyroscope - y axis
+    Range: [-1,1]
+73.Variable: fbodygyromeanfreqz
+
+    Definition: Fast Fourier Transform applied to Mean Frequency of gyroscope - z axis
+    Range: [-1,1]   
+74.Variable: fbodyaccmagmean
+
+    Definition: Fast Fourier Transform applied to Magnitude of Mean of body acceleration
+    Range: [-1,1]   
+75.Variable: fbodyaccmagmeanfreq
+
+    Definition: Fast Fourier Transform applied to Magnitude of Mean Frequency of body acceleration
+    Range: [-1,1]
+76.Variable: fbodybodyaccjerkmagmean
+
+    Definition: Fast Fourier Transform applied to Magnitude of Mean of body acceleration with jerk movements 
+    Range: [-1,1]
+77.Variable: fbodybodyaccjerkmagmeanfreq	
+
+    Definition: Fast Fourier Transform applied to Magnitude of Mean Frequency of body acceleration with jerk movements
+    Range: [-1,1]   
+78.Variable: fbodybodygyromagmean
+
+    Definition: Fast Fourier Transform applied to Magnitude of Mean of gyroscope
+    Range: [-1,1]
+79.Variable: fbodybodygyromagmeanfreq	
+
+    Definition: Fast Fourier Transform applied to Magnitude of Mean Frequency of gyroscope	
+    Range: [-1,1]
+80.Variable: fbodybodygyrojerkmagmean
+
+    Definition: Fast Fourier Transform applied to Magnitude of Mean of gyroscope with jerk movements
+    Range: [-1,1]   
+81.Variable: fbodybodygyrojerkmagmeanfreq
+
+    Definition: Fast Fourier Transform applied to Magnitude of Mean Frequency of gyroscope with jerk movements
+    Range: [-1,1]
+82.Variable: angletbodyaccmeangravity	
+
+    Definition: Angle of Mean of body acceleration signal  vs gravity	
+    Range: [-1,1]
+83.Variable: angletbodyaccjerkmeangravitymean
+
+    Definition: Angle of Mean of body accleration with jerk movements  vs gravity Mean
+    Range: [-1,1]   
+84.Variable: angletbodygyromeangravitymean
+
+    Definition: Angle of Mean of gyroscope vs gravity Mean 
+    Range: [-1,1]   
+85.Variable: angletbodygyrojerkmeangravitymean
+
+    Definition: Angle of Mean of gyroscope with jerk movements vs gravity Mean
+    Range: [-1,1]
+86.Variable: anglexgravitymean
+
+    Definition: Angle of gravity vs Mean - x axis 
+    Range: [-1,1]
+87.Variable:angleygravitymean
+
+    Definition: Angle of gravity vs Mean - y axis
+    Range: [-1,1]   
+88.Variable: anglezgravitymean
+
+    Definition: Angle of gravity vs Mean - z axis 
+    Range: [-1,1]
+
 
