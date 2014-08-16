@@ -4,32 +4,87 @@
 
 FieldWidth of all Variables is variable up to 32 characters
 
-1.Variable:subjectids
+1.Variable:  subjectids
 
-    Definition:Subject identifiers
-    Range:integer 1 to 30
-2.Variable: sxb
+    Definition:  Subject identifiers
+    Range:  integer 1 to 30
+2.Variable: activities
 
-    Definintion:
-    Range:
+    Definintion: 1-6 activities per subject:Walking, Walking upstairs, Walking Downstairs, Sitting, Standing, Laying
+    Range: integer 1 to 6
 3.Variable: abc
+
+    Definition: 
+    Range: 
+4.Variable: abc
 
     Definition:
     Range:
-    
+5.Variable: abc
 
+    Definition:
+    Range:   
+6.Variable: abc
 
-**Variable Name**+++++++++**Definition**++++++++++++++++++++++++++++++++**Range of Values**
-apples
-    : Good for making applesauce.
-    : Range of values
-  
-oranges
-  : Citrus!
-  
-1.subjectids
-    -Subject identifiers						
-        *integer 1 to 30
+    Definition:
+    Range:
+7.Variable: abc
+
+    Definition:
+    Range:
+8.Variable: abc
+
+    Definition:
+    Range:
+9.Variable: abc
+
+    Definition:
+    Range:
+10.Variable: abc
+
+    Definition:
+    Range:   
+11.Variable: abc
+
+    Definition:
+    Range:
+12.Variable: abc
+
+    Definition:
+    Range:
+13.Variable: abc
+
+    Definition:
+    Range:
+14.Variable: abc
+
+    Definition:
+    Range:
+15.Variable: abc
+
+    Definition:
+    Range:   
+16.Variable: abc
+
+    Definition:
+    Range:
+17.Variable: abc
+
+    Definition:
+    Range:
+18.Variable: abc
+
+    Definition:
+    Range:
+19.Variable: abc
+
+    Definition:
+    Range:
+20.Variable: abc
+
+    Definition:
+    Range:   
+
 
 2.activities		1-6 activities per subject:Walking, Walking				integer 1 to 6
 		upstairs, Walking Downstairs, Sitting, Standing	
