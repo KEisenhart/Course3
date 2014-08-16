@@ -2,7 +2,7 @@
 #Course Project for Coursera Getting & Cleaning Data class
 >==================================================================
 
-FieldWidth of all Variables is variable up to 32 characters
+NOTE: FieldWidth of all Variables is variable up to 32 characters
 
 1.Variable:  subjectids
 
@@ -12,65 +12,65 @@ FieldWidth of all Variables is variable up to 32 characters
 
     Definintion: 1-6 activities per subject:Walking, Walking upstairs, Walking Downstairs, Sitting, Standing, Laying
     Range: integer 1 to 6
-3.Variable: abc
+3.Variable: tbodyaccstdx
 
-    Definition: 
+    Definition: Standard Deviation of body acceleration - x axis
     Range: 
-4.Variable: abc
+4.Variable: tbodyaccstdy
 
-    Definition:
+    Definition: Standard Deviation of body acceleration - y axis
     Range:
-5.Variable: abc
+5.Variable: tbodyaccstdz
 
-    Definition:
+    Definition: Standard Deviation of body acceleration - z axis
     Range:   
-6.Variable: abc
+6.Variable: tgravityaccstdx
 
-    Definition:
+    Definition: Standard Deviation of gravity acceleration - x axis
     Range:
-7.Variable: abc
+7.Variable: tgravityaccstdy
 
-    Definition:
+    Definition: Standard Deviation of gravity acceleration - y axis
     Range:
-8.Variable: abc
+8.Variable: tgravityaccstdz
 
-    Definition:
+    Definition: Standard Deviation of gravity acceleration - z axis
     Range:
-9.Variable: abc
+9.Variable: tbodyaccjerkstdx
 
-    Definition:
+    Definition: Standard Deviation of body accleration with jerk movements - x axis
     Range:
-10.Variable: abc
+10.Variable: tbodyaccjerkstdy
 
-    Definition:
+    Definition: Standard Deviation of body accleration with jerk movements - y axis
     Range:   
-11.Variable: abc
+11.Variable: tbodyaccjerkstdz
 
-    Definition:
+    Definition: Standard Deviation of body accleration with jerk movements - z axis
     Range:
-12.Variable: abc
+12.Variable: tbodygyrostdx
 
-    Definition:
+    Definition: Standard Deviation of gyroscope - x axis	
     Range:
-13.Variable: abc
+13.Variable: tbodygyrostdy
 
-    Definition:
+    Definition: Standard Deviation of gyroscope - y axis	
     Range:
-14.Variable: abc
+14.Variable: tbodygyrostdz
 
-    Definition:
+    Definition: Standard Deviation of gyroscope - z axis	
     Range:
-15.Variable: abc
+15.Variable: tbodygyrojerkstdx
 
-    Definition:
+    Definition: Standard Deviation of gyroscope with jerk movements - x axis	
     Range:   
-16.Variable: abc
+16.Variable: tbodygyrojerkstdy
 
-    Definition:
+    Definition: Standard Deviation of gyroscope with jerk movements - y axis	
     Range:
-17.Variable: abc
+17.Variable: tbodygyrojerkstdz
 
-    Definition:
+    Definition: Standard Deviation of gyroscope with jerk movements - z axis	
     Range:
 18.Variable: abc
 
@@ -84,6 +84,51 @@ FieldWidth of all Variables is variable up to 32 characters
 
     Definition:
     Range:   
+21.Variable: abc
+
+    Definition:
+    Range:
+22.Variable: abc
+
+    Definition:
+    Range:
+23.Variable: abc
+
+    Definition:
+    Range:   
+24.Variable: abc
+
+    Definition:
+    Range:   
+25.Variable: abc
+
+    Definition:
+    Range:
+26.Variable: abc
+
+    Definition:
+    Range:
+27.Variable: abc
+
+    Definition:
+    Range:   
+28.Variable: abc
+
+    Definition:
+    Range:
+29.Variable: abc
+
+    Definition:
+    Range:
+30.Variable: abc
+
+    Definition:
+    Range:   
+
+
+
+
+
 
 
 2.activities		1-6 activities per subject:Walking, Walking				integer 1 to 6
