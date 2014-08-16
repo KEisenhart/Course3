@@ -2,12 +2,13 @@
 #CodeBook for Course Project for Coursera Class Getting & Cleaning Data 
 >==================================================================
 
-NOTE: FieldWidth of Variables are variable up to 32 characters
+NOTE: FieldWidth of Variables are variable up to 15 characters to allow for very small pos/neg numbers.
 
 1.Variable:  subjectids
 
     Definition:  Subject identifiers
-    Range:  integer 1 to 30
+    Units: Integer
+    Range:  1 to 30
 2.Variable: activities
 
     Definintion: 1-6 activities per subject:Walking, Walking upstairs, Walking Downstairs, Sitting, Standing, Laying
