@@ -2,7 +2,7 @@
 #CodeBook for Course Project for Coursera Class Getting & Cleaning Data 
 >==================================================================
 
-NOTE: FieldWidth of all Variables is variable up to 32 characters
+NOTE: FieldWidth or Range of Variables #3-#88 are variable up to 32 characters
 
 1.Variable:  subjectids
 
@@ -11,7 +11,7 @@ NOTE: FieldWidth of all Variables is variable up to 32 characters
 2.Variable: activities
 
     Definintion: 1-6 activities per subject:Walking, Walking upstairs, Walking Downstairs, Sitting, Standing, Laying
-    Range: integer 1 to 6
+    Range: variable up to 18 characters
 3.Variable: tbodyaccstdx
 
     Definition: Standard Deviation of body acceleration - x axis
