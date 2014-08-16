@@ -4,12 +4,32 @@
 
 FieldWidth of all Variables is variable up to 32 characters
 
+1.Variable:subjectids
+
+    Definition:Subject identifiers
+    Range:integer 1 to 30
+2.Variable: sxb
+
+    Definintion:
+    Range:
+3.Variable: abc
+
+    Definition:
+    Range:
+    
+
 
 **Variable Name**+++++++++**Definition**++++++++++++++++++++++++++++++++**Range of Values**
-
+apples
+    : Good for making applesauce.
+    : Range of values
+  
+oranges
+  : Citrus!
+  
 1.subjectids
--Subject identifiers						
-*integer 1 to 30
+    -Subject identifiers						
+        *integer 1 to 30
 
 2.activities		1-6 activities per subject:Walking, Walking				integer 1 to 6
 		upstairs, Walking Downstairs, Sitting, Standing	
