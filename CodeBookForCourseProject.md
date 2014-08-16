@@ -5,14 +5,17 @@
 FieldWidth of all Variables is variable up to 32 characters
 
 
-**Variable Name**	**Definition**					            **Range of Values**
-subjectids		Subject identifiers						integer 1 to 30
-activities		1-6 activities per subject:Walking, Walking				integer 1 to 6
+**Variable Name**+++++++++**Definition**++++++++++++++++++++++++++++++++**Range of Values**
+1.subjectids
+	a.Subject identifiers						
+		*integer 1 to 30
+
+2.activities		1-6 activities per subject:Walking, Walking				integer 1 to 6
 		upstairs, Walking Downstairs, Sitting, Standing	
 		or Laying			
-tbodyaccstdx	Standard Deviation of body acceleration - x axis			[-1,1]
-tbodyaccstdy	Standard Deviation of body acceleration - y axis			[-1,1]
-tbodyaccstdz	Standard Deviation of body acceleration - z axis			[-1,1]
+3.tbodyaccstdx	Standard Deviation of body acceleration - x axis			[-1,1]
+4.tbodyaccstdy	Standard Deviation of body acceleration - y axis			[-1,1]
+5.tbodyaccstdz	Standard Deviation of body acceleration - z axis			[-1,1]
 tgravityaccstdx	Standard Deviation of gravity acceleration - x axis			[-1,1]
 tgravityaccstdy	Standard Deviation of gravity acceleration - y axis			[-1,1]
 tgravityaccstdz	Standard Deviation of gravity acceleration - z axis			[-1,1]
