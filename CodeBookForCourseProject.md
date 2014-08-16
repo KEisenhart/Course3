@@ -17,7 +17,8 @@ From our project instructions we were directed to "Extract only the measurements
 standard deviation for each measurement." I interpreted this conservatively and thus extracted 86 
 measurements from the x_test and x_train files. I.e. any variable with mean or std referenced in its name. 
 
-The README file associated with this assignment will further discuss my approach to this assignment.
+My README file will further discuss my approach to this assignment. The rest of this document will
+list each of the variables that exist in the final submission file: dcasted.txt
 
 ##The Data Dictionary
 
