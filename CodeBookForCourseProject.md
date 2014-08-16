@@ -1,8 +1,25 @@
 >==================================================================
-#CodeBook for Course Project for Coursera Class Getting & Cleaning Data 
+#CodeBook for Course Project 
 >==================================================================
 
-NOTE: FieldWidth of Variables are variable up to 15 characters to allow for very small pos/neg numbers.
+##Relevant Information or Notes
+
+Field Width of these Variables are variable up to 18 characters to allow for very small pos/neg numbers 
+and larger activity descriptions such as "Walking Downstairs".
+
+Per the README.txt file provided to us in the download, the features are normalized 
+and bounded within -1 to 1. Therefore, unless stated else wise, the Range of the variables is set to [-1,1]
+
+Unless stated else wise, Units of measure are normalized frequency ratios rather than Hz since the [-1,1]
+bounding makes no sense in terms of Hz.
+
+From our project instructions we were directed to "Extract only the measurements on the mean and 
+standard deviation for each measurement." I interpreted this conservatively and thus extracted 86 
+measurements from the x_test and x_train files. I.e. any variable with mean or std referenced in its name. 
+
+The README file associated with this assignment will further discuss my approach to this assignment.
+
+##The Data Dictionary
 
 1.Variable:  subjectids
 
@@ -11,8 +28,9 @@ NOTE: FieldWidth of Variables are variable up to 15 characters to allow for very
     Range:  1 to 30
 2.Variable: activities
 
-    Definintion: 1-6 activities per subject:Walking, Walking upstairs, Walking Downstairs, Sitting, Standing, Laying
-    Range: variable up to 18 characters
+    Definition: 1-6 physical activities while on the phone
+    Units: Character
+    Range: Walking, Walking upstairs, Walking Downstairs, Sitting, Standing, Laying
 3.Variable: tbodyaccstdx
 
     Definition: Standard Deviation of body acceleration - x axis
@@ -39,15 +57,15 @@ NOTE: FieldWidth of Variables are variable up to 15 characters to allow for very
     Range: [-1,1]
 9.Variable: tbodyaccjerkstdx
 
-    Definition: Standard Deviation of body accleration with jerk movements - x axis
+    Definition: Standard Deviation of body acceleration with jerk movements - x axis
     Range: [-1,1]
 10.Variable: tbodyaccjerkstdy
 
-    Definition: Standard Deviation of body accleration with jerk movements - y axis
+    Definition: Standard Deviation of body acceleration with jerk movements - y axis
     Range: [-1,1]   
 11.Variable: tbodyaccjerkstdz
 
-    Definition: Standard Deviation of body accleration with jerk movements - z axis
+    Definition: Standard Deviation of body acceleration with jerk movements - z axis
     Range: [-1,1]
 12.Variable: tbodygyrostdx
 
@@ -75,15 +93,15 @@ NOTE: FieldWidth of Variables are variable up to 15 characters to allow for very
     Range: [-1,1]
 18.Variable: tbodyaccmagstd
 
-    Definition: Magnitude of the Standard Deviation of body accleration
+    Definition: Magnitude of the Standard Deviation of body acceleration
     Range: [-1,1]
 19.Variable: tgravityaccmagstd
 
-    Definition: Magnitude of the Standard Deviation  of gravity accleration
+    Definition: Magnitude of the Standard Deviation of gravity acceleration
     Range: [-1,1]
 20.Variable: tbodyaccjerkmagstd
 
-    Definition: Magnitude of the Standard Deviation of body accleration with jerk movements
+    Definition: Magnitude of the Standard Deviation of body acceleration with jerk movements
     Range: [-1,1]   
 21.Variable: tbodygyromagstd
 
@@ -131,19 +149,19 @@ NOTE: FieldWidth of Variables are variable up to 15 characters to allow for very
     Range: [-1,1]   
 32.Variable: fbodyaccmagstd
 
-    Definition: Fast Fourier Transform applied to Magntitude of STD of body accleration
+    Definition: Fast Fourier Transform applied to Magnitude of STD of body acceleration
     Range: [-1,1]
 33.Variable: fbodybodyaccjerkmagstd
 
-    Definition: Fast Fourier Transform applied to Magntitude of STD of body accleration with jerk movements	
+    Definition: Fast Fourier Transform applied to Magnitude of STD of body acceleration with jerk movements	
     Range: [-1,1]
 34.Variable: fbodybodygyromagstd
 
-    Definition: Fast Fourier Transform applied to Magntitude of STD of gyroscope
+    Definition: Fast Fourier Transform applied to Magnitude of STD of gyroscope
     Range: [-1,1]   
 35.Variable: fbodybodygyrojerkmagstd
 
-    Definition: Fast Fourier Transform applied to Magntitude of STD of gyroscope with jerk movements
+    Definition: Fast Fourier Transform applied to Magnitude of STD of gyroscope with jerk movements
     Range: [-1,1]   
 36.Variable: tbodyaccmeanx
 
@@ -171,15 +189,15 @@ NOTE: FieldWidth of Variables are variable up to 15 characters to allow for very
     Range: [-1,1]   
 42.Variable: tbodyaccjerkmeanx
 
-    Definition: Mean of body accleration with jerk movements - x axis
+    Definition: Mean of body acceleration with jerk movements - x axis
     Range: [-1,1]
 43.Variable: tbodyaccjerkmeany
 
-    Definition: Mean of body accleration with jerk movements - y axis
+    Definition: Mean of body acceleration with jerk movements - y axis
     Range: [-1,1] 
 44.Variable: tbodyaccjerkmeanz
 
-    Definition: Mean of body accleration with jerk movements - z axis
+    Definition: Mean of body acceleration with jerk movements - z axis
     Range: [-1,1]   
 45.Variable: tbodygyromeanx
 
@@ -207,15 +225,15 @@ NOTE: FieldWidth of Variables are variable up to 15 characters to allow for very
     Range: [-1,1] 
 51.Variable: tbodyaccmagmean
 
-    Definition: Magnitude of the Mean of body accleration
+    Definition: Magnitude of the Mean of body acceleration
     Range: [-1,1]
 52.Variable: tgravityaccmagmean	
 
-    Definition: Magnitude of the Mean of gravity accleration
+    Definition: Magnitude of the Mean of gravity acceleration
     Range: [-1,1]
 53.Variable: tbodyaccjerkmagmean
 
-    Definition: Magnitude of the Mean of body accleration with jerk movements
+    Definition: Magnitude of the Mean of body acceleration with jerk movements
     Range: [-1,1]   
 54.Variable: tbodygyromagmean
 
@@ -251,27 +269,27 @@ NOTE: FieldWidth of Variables are variable up to 15 characters to allow for very
     Range: [-1,1]
 62.Variable: fbodyaccjerkmeanx	
 
-    Definition: Fast Fourier Transform applied to Mean of body acceleraion with jerk movements - x axis
+    Definition: Fast Fourier Transform applied to Mean of body acceleration with jerk movements - x axis
     Range: [-1,1]
 63.Variable: fbodyaccjerkmeany
 
-    Definition: Fast Fourier Transform applied to Mean of body acceleraion with jerk movements - y axis
+    Definition: Fast Fourier Transform applied to Mean of body acceleration with jerk movements - y axis
     Range: [-1,1]   
 64.Variable: fbodyaccjerkmeanz
 
-    Definition: Fast Fourier Transform applied to Mean of body acceleraion with jerk movements - z axis
+    Definition: Fast Fourier Transform applied to Mean of body acceleration with jerk movements - z axis
     Range: [-1,1]   
 65.Variable: fbodyaccjerkmeanfreqx
 
-    Definition: Fast Fourier Transform applied to Mean Frequency of body acceleraion with jerk movements - x axis
+    Definition: Fast Fourier Transform applied to Mean Frequency of body acceleration with jerk movements - x axis
     Range: [-1,1]
 66.Variable: fbodyaccjerkmeanfreqy
 
-    Definition: Fast Fourier Transform applied to Mean Frequency of body acceleraion with jerk movements - y axis
+    Definition: Fast Fourier Transform applied to Mean Frequency of body acceleration with jerk movements - y axis
     Range: [-1,1]
 67.Variable: fbodyaccjerkmeanfreqz
 
-    Definition: Fast Fourier Transform applied to Mean Frequency of body acceleraion with jerk movements - z axis
+    Definition: Fast Fourier Transform applied to Mean Frequency of body acceleration with jerk movements - z axis
     Range: [-1,1]   
 68.Variable: fbodygyromeanx
 
@@ -335,7 +353,7 @@ NOTE: FieldWidth of Variables are variable up to 15 characters to allow for very
     Range: [-1,1]
 83.Variable: angletbodyaccjerkmeangravitymean
 
-    Definition: Angle of Mean of body accleration with jerk movements  vs gravity Mean
+    Definition: Angle of Mean of body acceleration with jerk movements  vs gravity Mean
     Range: [-1,1]   
 84.Variable: angletbodygyromeangravitymean
 
