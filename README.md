@@ -57,7 +57,8 @@ data.
 It then processes first test then training signal measurements by:
 
     a. assigning activities and subject ids to each of the 561 measurements. 
-    b. replacing the original V1-V561 column names from the X_test/train files with easier to read (tidy) signal names.     c. merging the activities, the subjects and the variables into one data frame.
+    b. replacing the original V1-V561 column names from the X_test/train files with easier to read (tidy) signal names.
+    c. merging the activities, the subjects and the variables into one data frame.
 
 It then merges the two data frames (test and training) with an rbind to make one very large data frame to 
 satisfy step 1 of the course project. This is called mdata.
