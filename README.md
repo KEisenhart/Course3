@@ -61,7 +61,7 @@ It then processes first test then training signal measurements by:
     a. renaming integer activities to English words.
     b. establishing meaningful column names for activities and test participants
     c. replacing the original V1-V561 column names from the X_test/train files with easier to read (tidy) measurement 
-    names taken from the features.txt file.
+       names taken from the features.txt file.
     d. merging the activities, the subjects and the measurements into one data frame.
 
 It then merges the two data frames (test and training) with an rbind to make one very large data frame to 
