@@ -41,38 +41,39 @@ The data license and acknowledgements - please see the end of this README file.
 #The 8 Required Input Files
 
 ###Test and Training measurements while on the Samsung phone:
-    1. X_train.txt: The Training set of measurements - 561 individual readings.
-    2. X_test.txt: The Test set of measurements - 561 individual readings.
-    3. features.txt: The names of the 561 variables in both X_train and Y_test files.
+    1. X_train.txt: The Training set of measurements - 561 individual columns of measurements.
+    2. X_test.txt: The Test set of measurements - 561 individual columns of measurements.
+    3. features.txt: The names of the 561 total variables in the X_train and Y_test files.
 ###Test and Training activities while on the phone that were measured:
-    4. y_train.txt: The training activities associated with each of the 561 readings.
-    5. y_test.txt: The test activities associated with each of the 561 readings.
-    6. activity_labels.txt: The English description of the 6 activities the subjects performed.
+    4. y_train.txt: The training activities associated with each of the 561 columns.
+    5. y_test.txt: The test activities associated with each of the 561 columns.
+    6. activity_labels.txt: The 6 activities the subjects performed.
 ###Subjects who performed the Test and Training activities:
     7. subject_test.txt: The subjects who performed the test activities.
     8. subject_train.txt: The subjects who performed the training activities.
 #The run_analysis.R Script
 
-###Briefly, What does it do?
-First, the scripts makes the variable names in the features.txt file more readable (tidy) before applying to the 
+###Briefly, What does the script do?
+First, the script makes the variable names in the features.txt file more readable (tidy) before being applied to the 
 data. 
 It then processes first test then training signal measurements by:
 
-    a. assigning activities and subject ids to each of the 561 measurements. 
-    b. replacing the original V1-V561 column names from the X_test/train files with easier to read (tidy) signal names.
-    c. merging the activities, the subjects and the variables into one data frame.
+    a. renaming integer activities to English words.
+    b. establishing meaningful column names for activities and test participants
+    c. replacing the original V1-V561 column names from the X_test/train files with easier to read (tidy) measurement 
+    names taken from the features.txt file.
+    d. merging the activities, the subjects and the measurements into one data frame.
 
 It then merges the two data frames (test and training) with an rbind to make one very large data frame to 
 satisfy step 1 of the course project. This is called mdata.
  
  
 The mdata data frame is the input used to satisfy the next requirement: to extract out any variables referencing 
-mean or standard deviation. In addition, the subject ids and activities are extracted and everything (subject 
-ids, activities and associated mean or std variables) is moved to yet another data frame called almost_tidy. 
+mean or standard deviation. The columns associated with the subjects, the activities and all measurements associated with std or mean are moved to yet another data frame called almost_tidy. 
 
 
-Finally, a melt/casting process is applied to this data in almost_tidy to produce the dcasted.txt file to satisfy 
-step 5 of the course project. This file is called dcasted.txt
+Finally, a melt/casting process is applied to this data in almost_tidy to produce the tidy data to satisfy 
+step 5 of the course project. This is in a file is called dcasted.txt
 
 #Tidy Data Effort
 The data was not easy to interpret because not only was it spread across 8 files, but it also had 561 readings 
