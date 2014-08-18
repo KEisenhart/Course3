@@ -12,7 +12,7 @@ Data was downloaded and unzipped for usage on August 5th 2014 @ 14:29:00 CDT
 
 The data provided is in several text files representing two sets of measurements, test and training, 
 which captured 561 movement signals on 30 people doing 6 activities each while wearing a Samsung 
-Galazy S II smartphone on their waist. 
+Galaxy S II Smartphone on their waist. 
 
 
 See my later detailed discussion on "The 8 Required Input Files".
@@ -41,13 +41,13 @@ The data license and acknowledgements - please see the end of this README file.
 ##The 8 Required Input Files
 
 ###Test and Training measurements while on the Samsung phone:
-    1. X_train.txt: The Training set of measuresments - 561 individual readings.
-    2. X_test.txt: The Test set of measuresments - 561 individual readings.
+    1. X_train.txt: The Training set of measurements - 561 individual readings.
+    2. X_test.txt: The Test set of measurements - 561 individual readings.
     3. features.txt: The names of the 561 variables in both X_train and Y_test files.
 ###Test and Training activities while on the phone that were measured:
     4. y_train.txt: The training activities associated with each of the 561 readings.
     5. y_test.txt: The test activities associated with each of the 561 readings.
-    6. activity_labels.txt: The english description of the 6 activities the subjects performed.
+    6. activity_labels.txt: The English description of the 6 activities the subjects performed.
 ###Subjects who performed the Test and Training activities:
     7. subject_test.txt: The subjects who performed the test activities.
     8. subject_train.txt: The subjects who performed the training activities.
@@ -76,7 +76,7 @@ step 5 of the course project. This file is called dcasted.txt
 
 #Tidy Data Effort
 The data was not easy to interpret because not only was it spread across 8 files, but it also had 561 readings 
-per subject per activity. The activities were identifieid by numerics rather than english words to describe such 
+per subject per activity. The activities were identified by numeric's rather than English words to describe such 
 actions as walking or sitting. 
 
 
