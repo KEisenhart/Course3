@@ -28,10 +28,10 @@ The data license and acknowledgements - please see the end of this README file.
     appropriate error message, just that simple. 
 
     2.Data Reduction - we were asked to extract "only the measurements on the mean and standard deviation for 
-each measurement". I took this to imply I was to pull out and utilize only those variables that held a mean or 
-std value. I extracted 86 such variables from both x and y _test files.  
+    each measurement". I took this to imply I was to pull out and utilize only those variables that held a mean or 
+    std value. I extracted 86 such variables from both x and y _test files.  
 
-    3.I did not utilize the 9/test, 9/training signal files as "they are the original sensor readings that the values in x were calculated from" - David Hood Coursera Community TA (Course Project Forum - "David's Course Project FAQ"). The post goes on to say that these files "the original inertial files" are not needed. 
+    3.I did not utilize the 9/test, 9/training signal files as "they are the original sensor readings that the values      in x were calculated from" - David Hood Coursera Community TA (Course Project Forum - "David's Course Project          FAQ"). The post goes on to say that these files "the original inertial files" are not needed. 
 
 ##The 8 Required Input Files
 
@@ -50,7 +50,6 @@ std value. I extracted 86 such variables from both x and y _test files.
 
 ###Briefly, What does it do?
 First, the scripts makes the variable names in the features.txt file more readable (tidy) before applying to the 
-
 data. 
 It then processes first test then training signal measurements by:
 
