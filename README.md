@@ -21,11 +21,11 @@ See my later detailed discussion on "The 8 Required Input Files".
 The data license and acknowledgements - please see the end of this README file.
 ##Assumptions
     1. The object of this course project was to become comfortable with data manipulation and to produce tidy 
-data. It was not to address real world i/o issues - missing files, corrupted files, no-read or write access, 
-missing sub folders, etc. I followed the course project instructions to "have a file run_analysis.R in the main 
-directory that can be run as long as the Samsung data is in my working directory." I did not attempt to fetch 
-the file via their hyperlinks, nor did I utilize or attempt to create any subdirectories. If the files that are required for this script are missing from the directory where run_analysis.R is executed the script stops with an 
-appropriate error message, just that simple. 
+    data. It was not to address real world i/o issues - missing files, corrupted files, no-read or write access, 
+    missing sub folders, etc. I followed the course project instructions to "have a file run_analysis.R in the main 
+    directory that can be run as long as the Samsung data is in my working directory." I did not attempt to fetch 
+    the file via their hyperlinks, nor did I utilize or attempt to create any subdirectories. If the files that are        required for this script are missing from the directory where run_analysis.R is executed the script stops with an 
+    appropriate error message, just that simple. 
 
     2.Data Reduction - we were asked to extract "only the measurements on the mean and standard deviation for 
 each measurement". I took this to imply I was to pull out and utilize only those variables that held a mean or 
