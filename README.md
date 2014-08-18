@@ -19,7 +19,7 @@ See my later detailed discussion on "The 8 Required Input Files".
 
 
 The data license and acknowledgements - please see the end of this README file.
-##Assumptions
+#Assumptions
     1. The object of this course project was to become comfortable with data manipulation and to produce tidy 
     data. It was not to address real world i/o issues - missing files, corrupted files, no-read or write access, 
     missing sub folders, etc. I followed the course project instructions to "have a file run_analysis.R in the main 
@@ -38,7 +38,7 @@ The data license and acknowledgements - please see the end of this README file.
     in x were calculated from" - David Hood Coursera Community TA (Course Project Forum - "David's Course Project  
     FAQ"). The post goes on to say that these files "the original inertial files" are not needed. 
 
-##The 8 Required Input Files
+#The 8 Required Input Files
 
 ###Test and Training measurements while on the Samsung phone:
     1. X_train.txt: The Training set of measurements - 561 individual readings.
@@ -51,7 +51,7 @@ The data license and acknowledgements - please see the end of this README file.
 ###Subjects who performed the Test and Training activities:
     7. subject_test.txt: The subjects who performed the test activities.
     8. subject_train.txt: The subjects who performed the training activities.
-##The run_analysis.R Script
+#The run_analysis.R Script
 
 ###Briefly, What does it do?
 First, the scripts makes the variable names in the features.txt file more readable (tidy) before applying to the 
@@ -119,20 +119,20 @@ reshape and recast the data into a more usable, readable form. This was accompli
 melt function to enable me to reshape the data by turning columns into rows (dataframe "dmelt"). This data 
 frame is 88,5714 rows x 88 columns after the melting. Very long but narrow. 
 
-#Final task, step 5
+##Final task, step 5
 I then calculated the mean of each variable for each activity for each subject from the dmelt data frame as per 
 the project instructions. I used the plyr function dcast to apply the mean to the melted data and recast the data 
 into a much tidier table of 180 rows (30 subjects * 6 activities) x 88 columns. The data is now wide and tidy. 
 It was written to disk file "dcasted.txt" with write.table, row.name set to false. It can be read in via read.table, 
 header set to TRUE.
 
-## Configuration
+#Configuration
 The script run_analysis.R was built and run under R v3.1.0, RStudio 98.507. Windows 7, 64 bit. Libraries 
 plyr, and reshape2 were needed for the functions revalue,melt and dcast respectively. Package reshape2 was 
 compiled under R v3.1.1 and will produce a warning message for older R versions. The warning is merely 
 informative and has no effect on operation.  
 
-##Acknowledgements
+#Acknowledgements
 For more information about this dataset contact: activityrecognition@smartlab.ws
 Human Activity Recognition Using Smartphones Dataset
 Version 1.0
