@@ -30,7 +30,8 @@ The data license and acknowledgements - please see the end of this README file.
 
     2.Data Reduction - we were asked to extract "only the measurements on the mean and standard deviation for 
     each measurement". I took this to mean I was to pull out and utilize only those variables that had a mean or 
-    standard deviation reference in their variable name. I extracted 86 such variables from both x and y "_test" files.     The variables are described and defined in the codebook associated with this course project and reside in the 
+    standard deviation reference in their variable name. I extracted 86 such variables from both x and y "_test" files.
+    The variables are described and defined in the codebook associated with this course project and reside in the 
     Course3 repo in a file called CodeBookforCourseProject.
 
     3.I did not utilize the 9/test, 9/training signal files as "they are the original sensor readings that the values 
