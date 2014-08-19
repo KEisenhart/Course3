@@ -21,22 +21,21 @@ See my later detailed discussion on "The 8 Required Input Files".
 The data license and acknowledgements - please see the end of this README file.
 #Assumptions
     1. The object of this course project was to become comfortable with data manipulation and to produce tidy 
-    data. It was not to address real world i/o issues - missing files, corrupted files, no-read or write access, 
-    missing sub folders, etc. I followed the course project instructions to "have a file run_analysis.R in the main 
-    directory that can be run as long as the Samsung data is in my working directory." I did not attempt to fetch 
-    the file via their hyperlinks, nor did I utilize or attempt to create any subdirectories. If the files that are 
-    required for this script are missing from the directory where run_analysis.R is executed the script stops with an 
-    appropriate error message, just that simple. 
+    data. It was not to address real world input/output issues - missing files, corrupted files, no read or write 
+    access, missing sub folders, etc. I followed the course project instructions to "have a file run_analysis.R in the 
+    main directory that can be run as long as the Samsung data is in my working directory." I did not attempt to fetch 
+    missing files via their hyperlinks, nor did I utilize or attempt to create any subdirectories. If the files that 
+    are required for this script are missing from the directory where run_analysis.R is executed the script stops with 
+    an appropriate error message, just that simple. 
 
     2.Data Reduction - we were asked to extract "only the measurements on the mean and standard deviation for 
-    each measurement". I took this to imply I was to pull out and utilize only those variables that held a mean or 
-    std value. I extracted 86 such variables from both x and y _test files.  The variables are described and defined in
-    the codebook associated with this course project and reside in the Course3 repo in a file called 
-    CodeBookforCourseProject.
+    each measurement". I took this to mean I was to pull out and utilize only those variables that had a mean or 
+    standard deviation reference in their variable name. I extracted 86 such variables from both x and y "_test" files.     The variables are described and defined in the codebook associated with this course project and reside in the 
+    Course3 repo in a file called CodeBookforCourseProject.
 
     3.I did not utilize the 9/test, 9/training signal files as "they are the original sensor readings that the values 
     in x were calculated from" - David Hood Coursera Community TA (Course Project Forum - "David's Course Project  
-    FAQ"). The post goes on to say that these files "the original inertial files" are not needed. 
+    FAQ"). The post goes on to say that these files, "the original inertial files", are not needed. 
 
 #The 8 Required Input Files
 
@@ -56,7 +55,7 @@ The data license and acknowledgements - please see the end of this README file.
 ###Briefly, What does the script do?
 First, the script makes the variable names in the features.txt file more readable (tidy) before being applied to the 
 data. 
-It then processes first test then training signal measurements by:
+It then processes first test, then training, signal measurements by:
 
     a. renaming integer activities to English words.
     b. establishing meaningful column names for activities and test participants
@@ -95,15 +94,14 @@ WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING.
 
 
 To reduce the number of files required I went on a merging effort. I merged all the test data together which 
-included the subjects and their activities as they related to the 561 measurements. I utilized a column that I 
-called observationnum that was used to be the common column for the merging of the files. This resulted in a 
-dataframe with 564 columns (1 for Subject, 1 for Activity,  561 signals, and 1 for observation num) times 
-2947 rows. I repeated this for training and got a merged dataframe of the same number of columns of course, 
-564 by 7352 rows.
+included the subjects and their activities as they related to the 561 measurements. I created a column that I 
+called observationnum that was to be the common column for the merging of the files. This resulted in a 
+dataframe with 2947 rows and 564 columns (1 for Subject, 1 for Activity,  561 signals, and 1 for observation num). I repeated this for training and got a merged dataframe of the same number of columns of course, so 
+7352 rows and 564 columns
 
 I then concluded my merging effort by doing a row bind with the test data frame "on top" and training at the 
 bottom. This resulted in 1 merged dataframe called mdata of 10,299 rows x 564 columns. I then removed the 
-temporary column I used for merging, observationnum and this left the merged dataframe at 10,299 x 563 
+temporary column I used for merging, observationnum, and this left the merged dataframe at 10,299 x 563 
 columns. This addressed step 1 of the course project and provided the tidy dataframe I needed for the next 
 part of the assignment - to extract out mean and standard deviation measurements only. 
 
@@ -123,7 +121,7 @@ frame is 88,5714 rows x 88 columns after the melting. Very long but narrow.
 ##Final task, step 5
 I then calculated the mean of each variable for each activity for each subject from the dmelt data frame as per 
 the project instructions. I used the plyr function dcast to apply the mean to the melted data and recast the data 
-into a much tidier table of 180 rows (30 subjects * 6 activities) x 88 columns. The data is now wide and tidy. 
+into a result table of 180 rows (30 subjects * 6 activities) x 88 columns. The data is now wide and tidy. 
 It was written to disk file "dcasted.txt" with write.table, row.name set to false. It can be read in via read.table, 
 header set to TRUE.
 
