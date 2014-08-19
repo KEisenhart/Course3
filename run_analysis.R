@@ -1,122 +1,72 @@
 #############Coursera Course Project Script run_analysis.R #######
-#This script has 4 functions:
+#This script has 3 functions:
 #The main function is run_analysis which invokes:
-#	processTestData
-#	processTrainingData
+#	processData
 #	get_mean_and_std
-#Descriptions and comments are provided for each function 
-#	as follows.
+#Descriptions and comments are provided for each function. 
 #Invoke as run_analysis(), there is nothing returned to caller
 #	unless a file cannot be found in the working directory.
 #PLEASE refer to README.MD and CodeBook.MD 
 #	before analysing this script.
 ##################################################################	
-#############Process Test data ###################################
+#############ProcesData ##########################################
 #Add appropriate labels to columns
-#Fix Test Activity names 
+#Fix Activity names 
 #Process Subjects 
-#Process Test variables
-#Merge together all test related data into 1 dataframe
-#Return to caller the dataframe mtstdata
+#Process measurement variables
+#Merge together all related data into 1 data frame
+#Return to caller the data frame merged_data
 ##
-processTestData <- function(features_all) { 
-	#Open the list of all the test activities
-	if (!file.exists("y_test.txt"))
-        stop( "Input file y_test.txt is missing" )
-	y_test<-read.table("y_test.txt")
+processData <- function(features_all,signal_type="") { 
+	thefile<- paste("y_",signal_type,".txt",sep="")
+	#Open the list of all the activities
+	if (!file.exists(thefile)) {
+		message<- paste("Input file ",thefile,"doesn't exist")
+		stop( message)
+	}
+	y_file<-read.table(thefile)
 	#Replace the column name
-	colnames(y_test)<-"activities"
+	colnames(y_file)<-"activities"
 	#Use real activity values instead of integers
-	y_test$activities<-revalue(as.character(y_test$activities),
+	y_file$activities<-revalue(as.character(y_file$activities),
 		c("1"="WALKING","2"="WALKING_UPSTAIRS",
                   "3"="WALKING_DOWNSTAIRS", "4" = "SITTING",
                   "5" = "STANDING", "6" = "LAYING"))
 	#Step 3 complete - use descriptive activity names
 	#
 	#Add a temporary common column for later merging
-	#Will be removed from final merged dataframe
-	y_test$observationnum<-1:nrow(y_test)	
+	#Will be removed from final merged data frame
+	y_file$observationnum<-1:nrow(y_file)	
 	#	
 	#Get list of subjects who did the activities
-	if (!file.exists("subject_test.txt"))
-        stop( "Input file subject_test.txt is missing" )
-	subject_test<-read.table("subject_test.txt")
+	thefile<-paste("subject_",signal_type,".txt",sep="")
+	if (!file.exists(thefile)) {
+		message<- paste("Input file",thefile,"doesn't exist")
+		stop( message)
+	}
+	subject_file<-read.table(thefile)
 	#Replace the column name
-	colnames(subject_test)<-"subjectids"
+	colnames(subject_file)<-"subjectids"
 	#Add the common column for later merging
-	subject_test$observationnum<-1:nrow(subject_test)	
+	subject_file$observationnum<-1:nrow(subject_file)	
 	#			  
-	#Now process x_test
-	if (!file.exists("X_test.txt"))
-		stop( "Input file X_test.txt is missing" )
-	x_test<-read.table("X_test.txt")
+	#Now process the signal measurements
+	thefile<-paste("X_",signal_type,".txt",sep="")
+	if (!file.exists(thefile)) {
+		message<- paste("Input file",thefile,"doesn't exist")
+		stop( message)
+	}
+	x_file<-read.table(thefile)
 	#Put in correct column names
-	names(x_test)<-features_all
+	names(x_file)<-features_all
 	#Add the common column for later merging
-	x_test$observationnum<-1:nrow(x_test)	
-	#Merge the test files by the common column "observationnum"
-	merged<-merge(x=subject_test,y=y_test,
+	x_file$observationnum<-1:nrow(x_file)	
+	#Merge the files by the common column "observationnum"
+	merged<-merge(x=subject_file,y=y_file,
 		by.x="observationnum",by.y="observationnum")
-	mtstdata<-merge(x=merged,y=x_test,
+	merged_data<-merge(x=merged,y=x_file,
 		by.x="observationnum",by.y="observationnum")
-	#Merged file is now 2947 rows by 564 columns -
-	#561 columns of data plus 3 more for Observation Number, 
-	#	Subject ID and Activity
-mtstdata
-}
-
-#############Process Training data ###############################
-#Add appropriate labels to columns
-#Fix Training Activity names 
-#Process Subjects 
-#Process Training variables
-#Merge together all training related data into 1 dataframe
-#Return to caller the dataframe mtrndata
-##
-processTrainingData <- function(features_all) { 
-	#Open the list of all the activities
-	if (!file.exists("y_train.txt"))
-        stop( "Input file y_train.txt is missing" )	
-	y_train<-read.table("y_train.txt")
-	#Replace the column name
-	colnames(y_train)<-"activities"
-	#Use real activity values instead of integers
-	y_train$activities<-revalue(as.character(y_train$activities),
-		c("1"="WALKING","2"="WALKING_UPSTAIRS",
-                  "3"="WALKING_DOWNSTAIRS", "4" = "SITTING",
-                  "5" = "STANDING", "6" = "LAYING"))
-	#Step 3 complete - use descriptive activity names
-	#
-	#Add a temporary common column for later merging
-	#Will be removed from final merged dataframe
-	y_train$observationnum<-1:nrow(y_train)	
-	#	
-	#Get list of subjects 
-	if (!file.exists("subject_train.txt"))
-        stop( "Input file subject_train.txt is missing" )	
-	subject_train<-read.table("subject_train.txt")
-	#Replace the column header
-	colnames(subject_train)<-"subjectids"
-	#Add a the common column for later merging
-	subject_train$observationnum<-1:nrow(subject_train)	
-	#
-	#Now process x_train
-	if (!file.exists("X_train.txt"))
-		stop( "Input file X_train.txt is missing" )
-	x_train<-read.table("X_train.txt")
-	#Put in correct column names
-	names(x_train)<-features_all
-	#Add the common column for later merging
-	x_train$observationnum<-1:nrow(x_train)	
-	#Merge the train files by the common column "observationnum"
-	merged<-merge(x=subject_train,y=y_train,
-		by.x="observationnum",by.y="observationnum")
-	mtrndata<-merge(x=merged,y=x_train,
-		by.x="observationnum",by.y="observationnum")
-	#Merged file is now 7352 rows by 564 columns -
-	#One column for Observation Number, another for Activities 
-	#	and another for Subject ID + 561 of data
-mtrndata
+merged_data
 }
 
 #############get_mean_and_std ####################################
@@ -133,7 +83,7 @@ get_mean_and_std<- function(mdata){
 	m<-length(themean)
 	std<-grep("std",names(mdata),value=TRUE)
 	s<-length(std)
-	#Create the dataframe to hold the std, the mean columns,
+	#Create the data frame to hold the std, the mean columns,
 	#	plus subject and activities
 	tcol=length(std)+length(themean)+2
 	trow=nrow(mdata) 
@@ -170,7 +120,7 @@ result.frame.final
 #	data frame.
 #Reshape and cast the final data structure to tidy it up. 
 #	Cast with mean function
-#Write the data structure, dcasted to disk file dcasted.txt.
+#Write the data structure, dcasted, to disk file dcasted.txt.
 #
 ####    Refer to README.MD and CodeBook.MD for additional    #####
 ####    information on implementation, variable data         #####
@@ -192,27 +142,25 @@ run_analysis<- function() {
 	#Step 4 complete. Label the data set with descriptive 
 	#	variable names
 	#Go process the test and training measurements
-	merged_test_data <- processTestData(final_features)
-	merged_train_data<- processTrainingData(final_features)
+	merged_test_data <- processData(final_features,"test")
+	merged_train_data<- processData(final_features,"train")
 	#Merge the test and training data putting the training data at the 
-	#	end of the test. mdata is 10299 rows by 564 columns
+	#	end of the test. 
 	mdata<-rbind(merged_test_data,merged_train_data)
 	#Remove the temp column used for sorting
 	mdata$observationnum<-NULL
-	#STEP 1 COMPLETE, mdata is the merged data frame of test and 
-	#	training data at 10299 rows by 563 columns
+	#STEP 1 COMPLETE, mdata is now in its final merged form
+	#	
 	#Get the standard deviations and means...
 	almost_tidy<-get_mean_and_std(mdata)
 	#STEP 2 COMPLETE, almost_tidy has just std's and means for 
-	#each subject and activity. File is 10299 rows long x 88 columns
+	#	each subject and activity. 
 	#
 	#Complete the project - Create a tidy data set of averages
 	#Melt the data to reshape it, make it long.
 	dmelt<-melt(almost_tidy,id.vars=c("subjectids","activities"))
-	#dmelt is 88,5714 rows x 88 columns
 	#Cast the data and apply the mean function to the variables
 	dcasted<-dcast(dmelt,subjectids + activities ~ variable, mean)
-	#Casted data is now only 180 rows(30 subjects*6 activities) x 88 columns
 	#Write table out with no row names
 	write.table(dcasted,file="dcasted.txt",row.name=FALSE)
 	#Step 5 complete - a tidy data set with the average of each variable  
