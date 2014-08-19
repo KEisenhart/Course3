@@ -36,7 +36,8 @@ The data license and acknowledgements - please see the end of this README file.
 
     3. I did not utilize the 9/test, 9/training signal files as "they are the original sensor readings that the values 
     in x were calculated from" - David Hood Coursera Community TA (Course Project Forum - "David's Course Project  
-    FAQ"). The post goes on to say that these files, "the original inertial files", are not needed. 
+    FAQ"). The post goes on to say that these files, "the original inertial files", are not needed.
+    
     4. Order of the assignment. It made no sense to me to merge the test/training data before fixing known issues with 
     labels and variable names. In the real world, I would first fix known problems. That way they don't get overlooked 
     later on. So, I fixed the activities and the column names before merging. It was just my design choice and makes no
@@ -90,11 +91,11 @@ V1-V561 with these variable names I edited them a bit to make them easier to dea
 characters such as dashes, commas, and left/right parens. To follow the recommendations of our instructors, 
 I also made each variable lowercase though to be honest, I would have preferred to leave them mixed case for 
 ease of reading. But, I didn't. Either way, the naming of the variables is now tidier and easier to search on, 
-process, etc. This addressed step 4 of our assignment.
+process, etc. This addressed STEP 4 of our assignment.
 
 
 I assigned real world meanings to the activities, replacing values 1-6 with WALKING, 
-WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING. This addressed step 3 of our assignment. 
+WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING. This addressed STEP 3 of our assignment. 
 
 
 To reduce the number of files required I went on a merging effort. I merged all the test data together which 
@@ -106,7 +107,7 @@ dataframe with 2947 rows and 564 columns (1 for Subject, 1 for Activity,  561 si
 I concluded my merging effort by doing a row bind with the test data frame "on top" and training at the 
 bottom. This resulted in 1 merged dataframe called mdata of 10,299 rows x 564 columns. I removed the 
 temporary column I used for merging, observationnum, and this left the merged dataframe at 10,299 x 563 
-columns. This addressed step 1 of the course project and provided the tidy dataframe I needed for the next 
+columns. This addressed STEP 1 of the course project and provided the tidy dataframe I needed for the next 
 part of the assignment - to extract out mean and standard deviation measurements only. 
 
 
@@ -115,7 +116,7 @@ details in the course project, I chose to extract any and all columns of data re
 deviation. I did not know enough about the experiment to make any other decision. I stored them in a dataframe called 
 almost_tidy and my comments in the run_analysis.R script should cover the mechanics of this extraction. Simply put, I 
 moved the subject ids, activities and all columns with std or mean in their column names from mdata and put them in a 
-new data frame called almost_tidy. This addressed step 2 of our assignment.
+new data frame called almost_tidy. This addressed STEP 2 of our assignment.
 
 
 The name almost_tidy was chosen because there remained one more major step in the tidy data effort - to 
@@ -123,12 +124,12 @@ reshape and recast the data into a more usable, readable form. This was accompli
 melt function to enable me to reshape the data by turning columns into rows (data frame "dmelt"). This data 
 frame is 88,5714 rows x 88 columns after the melting. Very long but narrow. 
 
-##Final task, step 5
+##Final task
 I then calculated the mean of each variable for each activity for each subject from the dmelt data frame as per 
 the project instructions. I used the plyr function dcast to apply the mean to the melted data and recast the data 
 into a result table of 180 rows (30 subjects * 6 activities) x 88 columns. The data is now wide and tidy. 
-It was written to disk file "dcasted.txt" with write.table, row.name set to false. It can be read into a data frame via
-read.table, header set to TRUE. It can also be read in human readable form via Excel, delimited with a space.
+It was written to disk file "dcasted.txt" with write.table, row.name set to false. STEP 5 is completed. The file can be
+read into a data frame via read.table, header set to TRUE. It can also be read in human readable form via Excel, delimited with a space.
 
 #Configuration
 The script run_analysis.R was built and run under R v3.1.0, RStudio 98.507. Windows 7, 64 bit. Libraries 
