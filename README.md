@@ -123,8 +123,8 @@ frame is 88,5714 rows x 88 columns after the melting. Very long but narrow.
 I then calculated the mean of each variable for each activity for each subject from the dmelt data frame as per 
 the project instructions. I used the plyr function dcast to apply the mean to the melted data and recast the data 
 into a result table of 180 rows (30 subjects * 6 activities) x 88 columns. The data is now wide and tidy. 
-It was written to disk file "dcasted.txt" with write.table, row.name set to false. It can be read in via read.table, 
-header set to TRUE.
+It was written to disk file "dcasted.txt" with write.table, row.name set to false. It can be read into a data frame via
+read.table, header set to TRUE. It can also be read in human readable form via Excel, delimited with a space.
 
 #Configuration
 The script run_analysis.R was built and run under R v3.1.0, RStudio 98.507. Windows 7, 64 bit. Libraries 
