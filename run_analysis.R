@@ -21,7 +21,7 @@ processData <- function(features_all,signal_type="") {
 	thefile<- paste("y_",signal_type,".txt",sep="")
 	#Open the list of all the activities
 	if (!file.exists(thefile)) {
-		message<- paste("Input file ",thefile,"doesn't exist")
+		message<- paste("Input file",thefile,"doesn't exist")
 		stop( message)
 	}
 	y_file<-read.table(thefile)
