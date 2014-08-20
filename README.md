@@ -35,10 +35,10 @@ The data license and acknowledgements - please see the end of this README file.
     x and y "_test" files. The variables are described and defined in the codebook associated with this 
     course project and reside in the Course3 repo in a file called CodeBookforCourseProject.
 
-    3. I did not utilize the 9/test, 9/training signal files as "they are the original sensor readings that 
-    the values in x were calculated from" - David Hood Coursera Community TA (Course Project Forum - 
-    "David's Course Project FAQ"). The post goes on to say that these files, "the original inertial files", 
-    are not needed.
+    3. I did not utilize the 9/test, 9/training signal files as "they are the original sensor readings 
+    that the values in x were calculated from" - David Hood Coursera Community TA (Course Project Forum  
+    "David's Course Project FAQ"). The post goes on to say that these files, "the original inertial 
+    files", are not needed.
     
     4. Order of the assignment. It made no sense to me to merge the test/training data before fixing known 
     issues with labels and variable names. In the real world, I would first fix known problems. That way 
