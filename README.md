@@ -21,27 +21,29 @@ See my later detailed discussion on "The 8 Required Input Files".
 The data license and acknowledgements - please see the end of this README file.
 #Assumptions
     1. The object of this course project was to become comfortable with data manipulation and to produce tidy 
-    data. It was not to address real world input/output issues - missing files, corrupted files, no read or write 
-    access, missing sub folders, etc. I followed the course project instructions to "have a file run_analysis.R in the 
-    main directory that can be run as long as the Samsung data is in my working directory." I did not attempt to fetch 
-    missing files via their hyperlinks, nor did I utilize or attempt to create any subdirectories. If the files that 
-    are required for this script are missing from the directory where run_analysis.R is executed the script stops with 
-    an appropriate error message, just that simple. 
+    data. It was not to address real world input/output issues - missing files, corrupted files, no read or 
+    write access, missing sub folders, etc. I followed the course project instructions to "have a file 
+    run_analysis.R in the main directory that can be run as long as the Samsung data is in my working 
+    directory." I did not attempt to fetch missing files via their hyperlinks, nor did I utilize or attempt 
+    to create any subdirectories. If the files that are required for this script are missing from the 
+    directory where run_analysis.R is executed the script stops with an appropriate error message, just 
+    that simple. 
 
-    2. Data Reduction - we were asked to extract "only the measurements on the mean and standard deviation for 
-    each measurement". I took this to mean I was to pull out and utilize only those variables that had a mean or 
-    standard deviation reference in their variable name. I extracted 86 such variables from both x and y "_test" files.
-    The variables are described and defined in the codebook associated with this course project and reside in the 
-    Course3 repo in a file called CodeBookforCourseProject.
+    2. Data Reduction - we were asked to extract "only the measurements on the mean and standard deviation 
+    for each measurement". I took this to mean I was to pull out and utilize only those variables that had 
+    a mean or standard deviation reference in their variable name. I extracted 86 such variables from both 
+    x and y "_test" files. The variables are described and defined in the codebook associated with this 
+    course project and reside in the Course3 repo in a file called CodeBookforCourseProject.
 
-    3. I did not utilize the 9/test, 9/training signal files as "they are the original sensor readings that the values 
-    in x were calculated from" - David Hood Coursera Community TA (Course Project Forum - "David's Course Project  
-    FAQ"). The post goes on to say that these files, "the original inertial files", are not needed.
+    3. I did not utilize the 9/test, 9/training signal files as "they are the original sensor readings that 
+    the values in x were calculated from" - David Hood Coursera Community TA (Course Project Forum - 
+    "David's Course Project FAQ"). The post goes on to say that these files, "the original inertial files", 
+    are not needed.
     
-    4. Order of the assignment. It made no sense to me to merge the test/training data before fixing known issues with 
-    labels and variable names. In the real world, I would first fix known problems. That way they don't get overlooked 
-    later on. So, I fixed the activities and the column names before merging. It was just my design choice and makes no
-    difference to the final outcome.
+    4. Order of the assignment. It made no sense to me to merge the test/training data before fixing known 
+    issues with labels and variable names. In the real world, I would first fix known problems. That way 
+    they don't get overlooked later on. So, I fixed the activities and the column names before merging. 
+    It was just my design choice and makes no difference to the final outcome.
 
 #The 8 Required Input Files
 
@@ -59,14 +61,14 @@ The data license and acknowledgements - please see the end of this README file.
 #The run_analysis.R Script
 
 ###Briefly, What does the script do?
-First, the script makes the variable names in the features.txt file more readable (tidy) before being applied to the 
-data. 
+First, the script makes the variable names in the features.txt file more readable (tidy) before being 
+applied to the data. 
 It then processes first test, then training, signal measurements by:
 
     a. renaming integer activities to English words.
     b. establishing meaningful column names for activities and test participants
-    c. replacing the original V1-V561 column names from the X_test/train files with easier to read (tidy) measurement 
-       names taken from the features.txt file.
+    c. replacing the original V1-V561 column names from the X_test/train files with easier to read (tidy) 
+       measurement names taken from the features.txt file.
     d. merging the activities, the subjects and the measurements into one data frame.
 
 It then merges the two data frames (test and training) with an rbind to make one very large data frame to 
