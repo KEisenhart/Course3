@@ -7,16 +7,14 @@ The data for this project was taken from the UCI Machine Learning Repository:
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 in the form of a downloaded zip file from here:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
-Data was downloaded and unzipped for usage on August 5th 2014 @ 14:29:00 CDT
 
+Data was downloaded and unzipped for usage on August 5th 2014 @ 14:29:00 CDT
 
 The data provided is in several text files representing two sets of measurements, test and training, 
 which captured 561 movement signals on 30 people doing 6 activities each while wearing a Samsung 
 Galaxy S II Smartphone on their waist. 
 
-
 See my later detailed discussion on "The 8 Required Input Files".
-
 
 The data license and acknowledgements - please see the end of this README file.
 #Assumptions
@@ -30,15 +28,14 @@ The data license and acknowledgements - please see the end of this README file.
     message, just that simple. 
 
     2. Data Reduction - we were asked to extract "only the measurements on the mean and standard deviation 
-    for each measurement". I took this to mean I was to pull out and utilize only those variables that had 
-    a mean or standard deviation reference in their variable name. I extracted 86 such variables from both 
-    X "_test" and "_train" files. The variables are described and defined in the codebook associated with 
-    this course project and reside in the Course3 repo in a file called CodeBookforCourseProject.
+    for each measurement". I took this to mean I was to pull out only those variables that had mean or 
+    standard deviation references in their variable name. I extracted 86 such variables which are described 
+    and defined in the codebook associated with this course project and reside in the Course3 repo in a 
+    file called CodeBookforCourseProject.
 
     3. I did not utilize the 9/test, 9/training signal files as "they are the original sensor readings 
-    that the values in x were calculated from" - David Hood Coursera Community TA (Course Project Forum  
-    "David's Course Project FAQ"). The post goes on to say that these files, "the original inertial 
-    files", are not needed.
+    that the values in x were calculated from" - David Hood Coursera Community TA ("David's Course Project 
+    FAQ"). https://class.coursera.org/getdata-006/forum/thread?thread_id=43#comment-603
     
     4. Order of the assignment. It made no sense to me to merge the test/training data before fixing known 
     issues with labels and variable names. In the real world, I would first fix known problems. That way 
@@ -50,7 +47,7 @@ The data license and acknowledgements - please see the end of this README file.
 ###Test and Training measurements while on the Samsung phone:
     1. X_train.txt: The Training set of measurements - 7352 rows x 561 individual columns of measurements.
     2. X_test.txt: The Test set of measurements - 2947 rows x 561 individual columns of measurements.
-    3. features.txt: The names of the 561 total variables in the X_train and Y_test files.
+    3. features.txt: The variable names associated with the 561 columns.
 ###Test and Training activities while on the phone that were measured:
     4. y_train.txt: The training activities associated with each of the 561 columns.
     5. y_test.txt: The test activities associated with each of the 561 columns.
@@ -65,7 +62,7 @@ First, the script makes the variable names in the features.txt file more readabl
 applied to the data. 
 It then processes first test, then training, signal measurements by:
 
-    a. renaming integer activities to English words.
+    a. renaming integer activities to descriptive words.
     b. establishing meaningful column names for activities and test participants
     c. replacing the original V1-V561 column names from the X_test/train files with easier to read (tidy) 
        measurement names taken from the features.txt file.
@@ -80,7 +77,7 @@ mean or standard deviation. The columns associated with the subjects, the activi
 
 
 Finally, a melt/casting process is applied to this data in almost_tidy to produce the tidy data to satisfy 
-step 5 of the course project. This is in a file is called dcasted.txt
+step 5 of the course project. 
 
 #Tidy Data Effort
 The data was not easy to interpret because not only was it spread across 8 files, but it also had 561 bascially 
@@ -109,7 +106,7 @@ dataframe with 2947 rows and 564 columns (1 for Subject, 1 for Activity,  561 si
 I concluded my merging effort by doing a row bind with the test data frame "on top" and training at the 
 bottom. This resulted in 1 merged dataframe called mdata of 10,299 rows x 564 columns. I removed the 
 temporary column I used for merging, observationnum, and this left the merged dataframe at 10,299 x 563 
-columns. This addressed STEP 1 of the course project and provided the tidy dataframe I needed for the next 
+columns. This addressed STEP 1 of the course project and provided the tidier dataframe I needed for the next 
 part of the assignment - to extract out mean and standard deviation measurements only. 
 
 
