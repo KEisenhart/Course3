@@ -5,7 +5,7 @@
 ##Relevant Information or Notes
 
 Field Width of these Variables are variable up to 18 characters to allow for very small pos/neg numbers 
-and larger activity descriptions such as "Walking Downstairs".
+and larger activity descriptions such as "Walking Downstairs". I did not assume a fixed width format.
 
 Per the README.txt file provided to us in the download, the features are normalized 
 and bounded within -1 to 1. Therefore, unless stated else wise, the Range of the variables is set to [-1,1]
@@ -15,7 +15,7 @@ bounding makes no sense in terms of Hz.
 
 From our project instructions we were directed to "Extract only the measurements on the mean and 
 standard deviation for each measurement." I interpreted this conservatively and thus extracted 86 
-measurements from the x_test and x_train files. I.e. any variable with mean or std referenced in its name. 
+measurements. I.e. any variable with mean or std referenced in its name from the original 561. 
 
 My README file will further discuss my approach to this assignment. The rest of this document will
 list each of the variables that exist in the final submission file: dcasted.txt
