@@ -26,18 +26,22 @@ The data license and acknowledgements - please see the end of this README file.
     or attempt to create any subdirectories. If the files that are required for this script are missing 
     from the directory where run_analysis.R is executed the script stops with an appropriate error 
     message, just that simple. 
+    
+    2. STEP 5 data file review. I assume the file submitted to Coursera for step 5 will be read into R or 
+    RStudio utilizing read.table with header set to TRUE. It will either be reviewed in an R environment or 
+    via Excel with delimeter being set to a "space".
 
-    2. Data Reduction - we were asked to extract "only the measurements on the mean and standard deviation 
+    3. Data Reduction - we were asked to extract "only the measurements on the mean and standard deviation 
     for each measurement". I took this to mean I was to pull out only those variables that had mean or 
     standard deviation references in their variable name. I extracted 86 such variables which are described 
     and defined in the codebook associated with this course project and reside in the Course3 repo in a 
     file called CodeBookforCourseProject.
 
-    3. I did not utilize the 9/test, 9/training signal files as "they are the original sensor readings 
+    4. I did not utilize the 9/test, 9/training signal files as "they are the original sensor readings 
     that the values in x were calculated from" - David Hood Coursera Community TA ("David's Course Project 
     FAQ"). https://class.coursera.org/getdata-006/forum/thread?thread_id=43#comment-603
     
-    4. Order of the assignment. It made no sense to me to merge the test/training data before fixing known 
+    5. Order of the assignment. It made no sense to me to merge the test/training data before fixing known 
     issues with labels and variable names. In the real world, I would first fix known problems. That way 
     they don't get overlooked later on. So, I fixed the activities and the column names before merging. 
     It was just my design choice and makes no difference to the final outcome.
