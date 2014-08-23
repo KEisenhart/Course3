@@ -29,9 +29,10 @@ The data license and acknowledgements - please see the end of this README file.
     
     2. Reviewing the tidy data set submitted for STEP 5 of the course project:  The window provided by 
     Coursera is notepad like, it is not the proper way to review my file dcasted.txt.  I assume my peers
-    will realize that and will take a moment to read the file into R or RStudio utilizing read.table 
-    with header set to TRUE. It can either be reviewed in an R environment or via Excel with delimeter 
-    being set to a "space".
+    will realize that and will take a moment and Copy Link Location, using this for the fileUrl argument
+    of download.file(fileUrl, destfile = "./dcasted.txt"). Once on disk, either read the file into R or 
+    RStudio utilizing read.table with header set to TRUE or open in Excel, delimited with a "space". I will
+    being doing the same for my reviews. 
 
     3. Data Reduction - we were asked to extract "only the measurements on the mean and standard deviation 
     for each measurement". I took this to mean I was to pull out only those variables that had mean or 
