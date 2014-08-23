@@ -27,9 +27,11 @@ The data license and acknowledgements - please see the end of this README file.
     from the directory where run_analysis.R is executed the script stops with an appropriate error 
     message, just that simple. 
     
-    2. STEP 5 data file review. I assume the file submitted to Coursera for step 5 will be read into R or 
-    RStudio utilizing read.table with header set to TRUE. It will either be reviewed in an R environment or 
-    via Excel with delimeter being set to a "space".
+    2. Reviewing the tidy data set submitted for STEP 5 of the course project:  The window provided by 
+    Coursera is notepad like, it is not the proper way to review my file dcasted.txt.  I assume my peers
+    will realize that and will take a moment to read the file into R or RStudio utilizing read.table 
+    with header set to TRUE. It can either be reviewed in an R environment or via Excel with delimeter 
+    being set to a "space".
 
     3. Data Reduction - we were asked to extract "only the measurements on the mean and standard deviation 
     for each measurement". I took this to mean I was to pull out only those variables that had mean or 
