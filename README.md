@@ -1,5 +1,5 @@
 ==================================================================
-Course Project for Coursera Getting & Cleaning Data class
+README for Course Project for Coursera Getting & Cleaning Data class
 ==================================================================
 
 #Introduction
