@@ -32,7 +32,9 @@ The data license and acknowledgements - please see the end of this README file.
     will realize that and will take a moment and Copy Link Location, using this for the fileUrl argument
     of download.file(fileUrl, destfile = "./dcasted.txt"). Once on disk, either read the file into R or 
     RStudio utilizing read.table with header set to TRUE or open in Excel, delimited with a "space". I will
-    being doing the same for my reviews. 
+    being doing the same for my reviews. Please read this forum discussion, especially section: "So what 
+    does this mean for the assignment?"  
+    https://class.coursera.org/getdata-006/forum/thread?thread_id=236#post-1091
 
     3. Data Reduction - we were asked to extract "only the measurements on the mean and standard deviation 
     for each measurement". I took this to mean I was to pull out only those variables that had mean or 
